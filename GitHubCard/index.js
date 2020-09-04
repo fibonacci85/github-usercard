@@ -7,18 +7,20 @@ import axios from 'axios';
     https://api.github.com/users/<your name>
 */
 
-axios.get('https://api.github.com/users/fibonacci85')
-.then(response  => {
-  console.log(response.data)
-  const myGit = response.data
+// axios.get('https://api.github.com/users/fibonacci85')
+// .then(response  => {
+//   console.log(response.data)
+// response.data.forEach(item => {
+//   cards.append(myFollowers(item))
+// })
 
 
-})
-.catch(error => {
- (console.log("ERROR")) 
-})
+// })
+// .catch(error => {
+//  (console.log("ERROR",error)) 
+// })
 
-console.log(myGit)
+
 
 
 /*
@@ -46,7 +48,146 @@ console.log(myGit)
     user, and adding that card to the DOM.
 */
 
-const followersArray = [];
+const followersArray = [ {
+  "login": "chrisjcorbin",
+  "id": 64340122,
+  "node_id": "MDQ6VXNlcjY0MzQwMTIy",
+  "avatar_url": "https://avatars2.githubusercontent.com/u/64340122?v=4",
+  "gravatar_id": "",
+  "url": "https://api.github.com/users/chrisjcorbin",
+  "html_url": "https://github.com/chrisjcorbin",
+  "followers_url": "https://api.github.com/users/chrisjcorbin/followers",
+  "following_url": "https://api.github.com/users/chrisjcorbin/following{/other_user}",
+  "gists_url": "https://api.github.com/users/chrisjcorbin/gists{/gist_id}",
+  "starred_url": "https://api.github.com/users/chrisjcorbin/starred{/owner}{/repo}",
+  "subscriptions_url": "https://api.github.com/users/chrisjcorbin/subscriptions",
+  "organizations_url": "https://api.github.com/users/chrisjcorbin/orgs",
+  "repos_url": "https://api.github.com/users/chrisjcorbin/repos",
+  "events_url": "https://api.github.com/users/chrisjcorbin/events{/privacy}",
+  "received_events_url": "https://api.github.com/users/chrisjcorbin/received_events",
+  "type": "User",
+  "site_admin": false
+},
+{
+  "login": "saljahmi",
+  "id": 67301971,
+  "node_id": "MDQ6VXNlcjY3MzAxOTcx",
+  "avatar_url": "https://avatars1.githubusercontent.com/u/67301971?v=4",
+  "gravatar_id": "",
+  "url": "https://api.github.com/users/saljahmi",
+  "html_url": "https://github.com/saljahmi",
+  "followers_url": "https://api.github.com/users/saljahmi/followers",
+  "following_url": "https://api.github.com/users/saljahmi/following{/other_user}",
+  "gists_url": "https://api.github.com/users/saljahmi/gists{/gist_id}",
+  "starred_url": "https://api.github.com/users/saljahmi/starred{/owner}{/repo}",
+  "subscriptions_url": "https://api.github.com/users/saljahmi/subscriptions",
+  "organizations_url": "https://api.github.com/users/saljahmi/orgs",
+  "repos_url": "https://api.github.com/users/saljahmi/repos",
+  "events_url": "https://api.github.com/users/saljahmi/events{/privacy}",
+  "received_events_url": "https://api.github.com/users/saljahmi/received_events",
+  "type": "User",
+  "site_admin": false
+},
+{
+  "login": "pvaidehee",
+  "id": 66982470,
+  "node_id": "MDQ6VXNlcjY2OTgyNDcw",
+  "avatar_url": "https://avatars3.githubusercontent.com/u/66982470?v=4",
+  "gravatar_id": "",
+  "url": "https://api.github.com/users/pvaidehee",
+  "html_url": "https://github.com/pvaidehee",
+  "followers_url": "https://api.github.com/users/pvaidehee/followers",
+  "following_url": "https://api.github.com/users/pvaidehee/following{/other_user}",
+  "gists_url": "https://api.github.com/users/pvaidehee/gists{/gist_id}",
+  "starred_url": "https://api.github.com/users/pvaidehee/starred{/owner}{/repo}",
+  "subscriptions_url": "https://api.github.com/users/pvaidehee/subscriptions",
+  "organizations_url": "https://api.github.com/users/pvaidehee/orgs",
+  "repos_url": "https://api.github.com/users/pvaidehee/repos",
+  "events_url": "https://api.github.com/users/pvaidehee/events{/privacy}",
+  "received_events_url": "https://api.github.com/users/pvaidehee/received_events",
+  "type": "User",
+  "site_admin": false
+},
+{
+  "login": "mphelps1978",
+  "id": 56881040,
+  "node_id": "MDQ6VXNlcjU2ODgxMDQw",
+  "avatar_url": "https://avatars3.githubusercontent.com/u/56881040?v=4",
+  "gravatar_id": "",
+  "url": "https://api.github.com/users/mphelps1978",
+  "html_url": "https://github.com/mphelps1978",
+  "followers_url": "https://api.github.com/users/mphelps1978/followers",
+  "following_url": "https://api.github.com/users/mphelps1978/following{/other_user}",
+  "gists_url": "https://api.github.com/users/mphelps1978/gists{/gist_id}",
+  "starred_url": "https://api.github.com/users/mphelps1978/starred{/owner}{/repo}",
+  "subscriptions_url": "https://api.github.com/users/mphelps1978/subscriptions",
+  "organizations_url": "https://api.github.com/users/mphelps1978/orgs",
+  "repos_url": "https://api.github.com/users/mphelps1978/repos",
+  "events_url": "https://api.github.com/users/mphelps1978/events{/privacy}",
+  "received_events_url": "https://api.github.com/users/mphelps1978/received_events",
+  "type": "User",
+  "site_admin": false
+},
+{
+  "login": "JoelVega97",
+  "id": 67379632,
+  "node_id": "MDQ6VXNlcjY3Mzc5NjMy",
+  "avatar_url": "https://avatars2.githubusercontent.com/u/67379632?v=4",
+  "gravatar_id": "",
+  "url": "https://api.github.com/users/JoelVega97",
+  "html_url": "https://github.com/JoelVega97",
+  "followers_url": "https://api.github.com/users/JoelVega97/followers",
+  "following_url": "https://api.github.com/users/JoelVega97/following{/other_user}",
+  "gists_url": "https://api.github.com/users/JoelVega97/gists{/gist_id}",
+  "starred_url": "https://api.github.com/users/JoelVega97/starred{/owner}{/repo}",
+  "subscriptions_url": "https://api.github.com/users/JoelVega97/subscriptions",
+  "organizations_url": "https://api.github.com/users/JoelVega97/orgs",
+  "repos_url": "https://api.github.com/users/JoelVega97/repos",
+  "events_url": "https://api.github.com/users/JoelVega97/events{/privacy}",
+  "received_events_url": "https://api.github.com/users/JoelVega97/received_events",
+  "type": "User",
+  "site_admin": false
+},
+{
+  "login": "Cory-Thomas",
+  "id": 29168407,
+  "node_id": "MDQ6VXNlcjI5MTY4NDA3",
+  "avatar_url": "https://avatars0.githubusercontent.com/u/29168407?v=4",
+  "gravatar_id": "",
+  "url": "https://api.github.com/users/Cory-Thomas",
+  "html_url": "https://github.com/Cory-Thomas",
+  "followers_url": "https://api.github.com/users/Cory-Thomas/followers",
+  "following_url": "https://api.github.com/users/Cory-Thomas/following{/other_user}",
+  "gists_url": "https://api.github.com/users/Cory-Thomas/gists{/gist_id}",
+  "starred_url": "https://api.github.com/users/Cory-Thomas/starred{/owner}{/repo}",
+  "subscriptions_url": "https://api.github.com/users/Cory-Thomas/subscriptions",
+  "organizations_url": "https://api.github.com/users/Cory-Thomas/orgs",
+  "repos_url": "https://api.github.com/users/Cory-Thomas/repos",
+  "events_url": "https://api.github.com/users/Cory-Thomas/events{/privacy}",
+  "received_events_url": "https://api.github.com/users/Cory-Thomas/received_events",
+  "type": "User",
+  "site_admin": false
+},
+{
+  "login": "maycie-morris",
+  "id": 67204638,
+  "node_id": "MDQ6VXNlcjY3MjA0NjM4",
+  "avatar_url": "https://avatars1.githubusercontent.com/u/67204638?v=4",
+  "gravatar_id": "",
+  "url": "https://api.github.com/users/maycie-morris",
+  "html_url": "https://github.com/maycie-morris",
+  "followers_url": "https://api.github.com/users/maycie-morris/followers",
+  "following_url": "https://api.github.com/users/maycie-morris/following{/other_user}",
+  "gists_url": "https://api.github.com/users/maycie-morris/gists{/gist_id}",
+  "starred_url": "https://api.github.com/users/maycie-morris/starred{/owner}{/repo}",
+  "subscriptions_url": "https://api.github.com/users/maycie-morris/subscriptions",
+  "organizations_url": "https://api.github.com/users/maycie-morris/orgs",
+  "repos_url": "https://api.github.com/users/maycie-morris/repos",
+  "events_url": "https://api.github.com/users/maycie-morris/events{/privacy}",
+  "received_events_url": "https://api.github.com/users/maycie-morris/received_events",
+  "type": "User",
+  "site_admin": false
+}];
 
 
 /*
@@ -69,56 +210,56 @@ const followersArray = [];
     </div>
 */
 
-function myFollowers(array) {
+function myFollowers(obj) {
 
-const cards = document.querySelector('cards')  
 
 const card = document.createElement('div');
 card.classList.add('card')
 
 const image = document.createElement('img');
-image.src = `${array.avatar_url}`
+image.src = `${obj.avatar_url}`
 
 const cardInfo = document.createElement('div');
 cardInfo.classList.add('card-info')
 
 const name = document.createElement('h3');
 name.classList.add('name')
-name.textContent = `Name: ${array.name}`
+name.textContent = `Name: ${obj.name}`
 
 const userName = document.createElement('p');
 userName.classList.add('username')
-userName.textContent = `UserName: ${array.login}`
+userName.textContent = `UserName: ${obj.login}`
 
 const location = document.createElement('p');
-location.textContent = `Location: ${array.location}`
+location.textContent = `Location: ${obj.location}`
 
 const profile = document.createElement('p');
 profile.textContent = "Profile:"
 
 const profileLink = document.createElement('a')
-profileLink.href = `${array.url}`
+profileLink.href = `${obj.url}`
+profileLink.textContent = `${obj.url}`
 
 const followers = document.createElement('p')
-followers.textContent = `Followers: ${array.followers}`
+followers.textContent = `Followers: ${obj.followers}`
 
 const following = document.createElement('p')
-following.textContent = `Following: ${array.following}`
+following.textContent = `Following: ${obj.following}`
 
 const bio = document.createElement('p')
-bio.textContent = `Bio: ${array.bio}`
+bio.textContent = `Bio: ${obj.bio}`
 
-cards.appendChild(card)
-card.appendChild(image)
-card.appendChild(cardInfo)
-cardInfo.appendChild(name)
-cardInfo.appendChild(userName)
-cardInfo.appendChild(location)
-cardInfo.appendChild(profile)
-cardInfo.appendChild(profileLink)
-cardInfo.appendChild(followers)
-cardInfo.appendChild(following)
-cardInfo.appendChild(bio)
+
+card.append(image)
+card.append(cardInfo)
+cardInfo.append(name)
+cardInfo.append(userName)
+cardInfo.append(location)
+cardInfo.append(profile)
+cardInfo.append(profileLink)
+cardInfo.append(followers)
+cardInfo.append(following)
+cardInfo.append(bio)
 
 
 return card
@@ -126,9 +267,33 @@ return card
 
 }
 
-console.log(myFollowers(followersArray))
+const cards = document.querySelector('.cards')  
+console.log(cards)
 
-// myFollowers(followersArray[0])
+//my card
+
+axios.get('https://api.github.com/users/fibonacci85')
+.then(response  => {
+cards.appendChild(myFollowers(response.data))
+})
+
+.catch(error => {
+ (console.log("ERROR",error)) 
+})
+
+
+//followers
+
+// axios.get('https://api.github.com/users/fibonacci85/followers')
+// .then(response  => {
+// cards.appendChild(myFollowers(response.data))
+// })
+
+console.log(followersArray)
+followersArray.forEach(item => {
+  cards.append(myFollowers(item))
+})
+
 
 
 
